@@ -28,3 +28,14 @@ p{margin-bottom:13px}section{scroll-margin-top:18px}.page-section{padding-top:2p
 footer{border-top:1px solid var(--border);padding:21px 0;margin-top:30px;color:#888;font-size:13px}
 @media(max-width:760px){.navbar{align-items:flex-start;flex-direction:column;padding:15px 0;gap:8px}.nav-links{gap:9px 15px}.hero{gap:22px}}
 @media(max-width:560px){main{padding-top:34px}h1{font-size:32px}.hero{flex-direction:column-reverse}.profile-photo{width:135px;height:165px;flex-basis:auto}.subtitle{font-size:16px}}
+/* Circular profile image */
+
+.profile-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin: 0 auto 20px;
+}
