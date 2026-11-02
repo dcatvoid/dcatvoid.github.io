@@ -39,3 +39,77 @@ footer{border-top:1px solid var(--border);padding:21px 0;margin-top:30px;color:#
     display: block;
     margin: 0 auto 20px;
 }
+/* =====================================
+   HOMEPAGE PROFILE HYPERLINK ICONS
+===================================== */
+
+.profile-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.profile-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50px;
+    height: 50px;
+
+    color: #000000;
+    text-decoration: none;
+
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.profile-link svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+}
+
+.profile-link:hover {
+    transform: translateY(-4px);
+    opacity: 0.7;
+}
+
+/* CV text icon */
+
+.cv-icon {
+    font-family: Arial, sans-serif;
+    font-size: 39px;
+    font-weight: 700;
+    letter-spacing: -2px;
+}
+
+/* Google Scholar icon */
+
+.scholar-icon svg {
+    width: 48px;
+    height: 48px;
+}
+
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 480px) {
+
+    .profile-links {
+        gap: 15px;
+    }
+
+    .profile-link {
+        width: 40px;
+        height: 40px;
+    }
+
+    .cv-icon {
+        font-size: 32px;
+    }
+
+}
