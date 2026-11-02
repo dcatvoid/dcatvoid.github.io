@@ -1,40 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Publications and manuscripts by Abdullah Al Anan.">
+
+    <meta name="description"
+          content="Research manuscripts and academic research outputs by Abdullah Al Anan.">
+
     <title>Publications | Abdullah Al Anan</title>
+
     <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/portfolio.css">
 </head>
+
 <body>
+
+
+    <!-- NAVIGATION -->
     <header class="site-header">
         <div class="container">
+
             <nav class="navbar" aria-label="Main navigation">
-                <span class="site-name"></span>
+
+                <span class="site-name" aria-hidden="true"></span>
+
                 <div class="nav-links">
+
                     <a href="index.html">Home</a>
+
                     <a href="projects.html">Research Projects</a>
-                    <a href="publications.html" class="active" aria-current="page">Publications</a>
+
+                    <a href="publications.html"
+                       class="active"
+                       aria-current="page">
+                        Publications
+                    </a>
+
                 </div>
+
             </nav>
+
         </div>
     </header>
 
-    <main class="container">
-        <p class="eyebrow">SCHOLARLY WORK</p>
-        <h1>Publications</h1>
-        <p class="subtitle">Journal manuscripts and research outputs.</p>
 
-        <section class="item" aria-labelledby="publication-soc">
-            <h3 id="publication-soc" class="publication-title">Integrating Machine Learning, Remote Sensing and In-Situ 2 Data to Map Soil Organic Carbon (SOC) in Sundarbans Man-3 grove Forest</h3>
-            <p class="meta"><em>Science of the Total Environment</em></p>
-            <p class="status">Manuscript status: Under review</p>
+
+    <!-- MAIN CONTENT -->
+    <main class="container portfolio-main">
+
+
+        <!-- PAGE INTRODUCTION -->
+        <section class="page-heading">
+
+            <p class="eyebrow">SCHOLARLY OUTPUT</p>
+
+            <h1>Publications</h1>
+
+            <p class="subtitle">
+                Research manuscripts and academic work.
+                Publication and submission details are shown
+                only where they are confirmed.
+            </p>
+
         </section>
+
+
+
+        <!-- RESEARCH MANUSCRIPTS -->
+        <section aria-labelledby="manuscripts-heading">
+
+            <div class="section-heading-row">
+
+                <h2 id="manuscripts-heading">
+                    Manuscripts
+                </h2>
+
+                <span class="section-count">01</span>
+
+            </div>
+
+
+
+            <!-- SOC MANUSCRIPT -->
+            <article class="publication-card">
+
+                <div class="publication-meta">
+
+                    <span class="publication-kind">
+                        RESEARCH MANUSCRIPT
+                    </span>
+
+                    <span class="publication-status">
+                        UNDER REVIEW · SCIENCE OF THE TOTAL ENVIRONMENT
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    Integrating Machine Learning, Remote Sensing,
+                    and In-Situ Data to Map Soil Organic Carbon (SOC)
+                    in Sundarbans Mangrove Forest
+                </h3>
+
+
+                <p class="publication-abstract">
+                    This study integrates 173 in-situ soil samples
+                    with soil properties, Sentinel-2 spectral indices,
+                    terrain attributes and micro-climatic variables
+                    to estimate the spatial distribution of soil
+                    organic carbon in the Sundarbans mangrove forest.
+                    Variance Inflation Factor (VIF) and Genetic
+                    Algorithm (GA) feature selection are combined
+                    with six machine-learning models.
+                </p>
+
+
+                <!-- MANUSCRIPT DETAILS -->
+                <div class="publication-details">
+
+                    <div>
+
+                        <span class="fact-label">
+                            Study area
+                        </span>
+
+                        <strong>
+                            Sundarbans, Bangladesh
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span class="fact-label">
+                            Best-performing model reported
+                        </span>
+
+                        <strong>
+                            Gradient Boosting Regression Tree (GBRT)
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span class="fact-label">
+                            Key result
+                        </span>
+
+                        <strong>
+                            R² = 0.394 · AUC = 0.744
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <p class="contribution">
+                    <strong>
+                        Contribution recorded in the manuscript
+                        under “AAA”:
+                    </strong>
+
+                    Original drafting, methodology, formal analysis
+                    and data curation.
+                </p>
+
+            </article>
+
+        </section>
+
+
+
+        <!-- THESIS AND ACADEMIC WORK -->
+        <section class="academic-work"
+                 aria-labelledby="academic-heading">
+
+            <div class="section-heading-row">
+
+                <h2 id="academic-heading">
+                    Thesis &amp; Academic Research
+                </h2>
+
+                <span class="section-count">01</span>
+
+            </div>
+
+
+            <article class="academic-card">
+
+                <p class="publication-kind">
+                    UNDERGRADUATE THESIS · URP 4000
+                </p>
+
+
+                <h3>
+                    Wavelet Decomposed Short Term Daily Precipitation
+                    Forecasting Using Artificial Neural Networks
+                    in Khulna, Bangladesh
+                </h3>
+
+
+                <p class="meta">
+                    Khulna University of Engineering &amp; Technology
+                    · Presented 17 August 2026
+                </p>
+
+
+                <p>
+                    Daily precipitation forecasting, rainfall trend
+                    and persistence analysis, and extreme-rainfall
+                    return-period assessment across five rain-gauge
+                    stations in Khulna.
+                </p>
+
+
+                <p class="meta">
+                    Supervisor: Dr. Tusar Kanti Roy
+                </p>
+
+
+                <a class="text-link"
+                   href="projects/precipitation.html">
+                    View thesis overview →
+                </a>
+
+            </article>
+
+        </section>
+
+
+
+        <!-- PUBLICATION NOTE -->
+        <p class="portfolio-note">
+
+            The Sundarbans SOC manuscript is listed as under review
+            at <em>Science of the Total Environment</em>.
+            A DOI and final volume, issue and page details can be
+            added if the manuscript is accepted and published.
+
+            The thesis is listed separately from journal manuscripts
+            because it is an academic thesis presentation, not a
+            journal publication.
+
+        </p>
+
+
     </main>
 
+
+
+    <!-- FOOTER -->
     <footer>
-        <div class="container">© 2026 Abdullah Al Anan · Research Portfolio</div>
+        <div class="container">
+            © 2026 Abdullah Al Anan · Research Portfolio
+        </div>
     </footer>
+
+
 </body>
 </html>
