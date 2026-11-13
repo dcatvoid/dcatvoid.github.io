@@ -39,7 +39,7 @@
     }
   ];
 
-  /* Populate homepage and footer contact icons */
+  /* Generate contact icons */
   $$('[data-icons]').forEach(container => {
     const iconList = document.createElement('ul');
     iconList.className = 'icons';
@@ -53,13 +53,11 @@
       anchor.target = '_blank';
       anchor.rel = 'noopener noreferrer';
       anchor.setAttribute('aria-label', label);
-      anchor.title = label;
 
       anchor.innerHTML = `
         <svg viewBox="0 0 24 24" aria-hidden="true">
           ${icon}
         </svg>
-        <span>${label}</span>
       `;
 
       item.appendChild(anchor);
@@ -91,6 +89,7 @@
           <button class="ib" id="theme" type="button"
             aria-label="Toggle light or dark theme"></button>
         </div>
+
         <div id="prog" aria-hidden="true"></div>
       </header>`
     );
@@ -108,7 +107,7 @@
     );
   }
 
-  /* Lightbox */
+  /* Image lightbox */
   if (!$('#lb')) {
     body.insertAdjacentHTML(
       'beforeend',
@@ -123,11 +122,14 @@
     function setTheme(theme, save) {
       root.dataset.theme = theme;
 
-      themeButton.textContent = theme === 'dark' ? '☀️' : '🌙';
+      themeButton.textContent =
+        theme === 'dark' ? '☀️' : '🌙';
 
       themeButton.setAttribute(
         'aria-label',
-        theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'
+        theme === 'dark'
+          ? 'Switch to light theme'
+          : 'Switch to dark theme'
       );
 
       if (save) {
@@ -169,7 +171,11 @@
   if (burger && nav) {
     burger.addEventListener('click', () => {
       const isOpen = nav.classList.toggle('open');
-      burger.setAttribute('aria-expanded', String(isOpen));
+
+      burger.setAttribute(
+        'aria-expanded',
+        String(isOpen)
+      );
     });
   }
 
@@ -178,7 +184,8 @@
 
   if (progress) {
     const updateProgress = () => {
-      const scrollableHeight = root.scrollHeight - window.innerHeight;
+      const scrollableHeight =
+        root.scrollHeight - window.innerHeight;
 
       const progressPercent = scrollableHeight > 0
         ? (window.scrollY / scrollableHeight) * 100
@@ -267,7 +274,7 @@
 
         card.hidden = !shouldShow;
 
-        if (shouldShow) visibleCount++;
+        if (shouldShow) visibleCount += 1;
       });
 
       const emptyMessage = $('#empty');
