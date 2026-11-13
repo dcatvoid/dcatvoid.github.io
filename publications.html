@@ -1,31 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Publications | Abdullah Al Anan</title>
-<meta name="description" content="Research manuscripts and academic research outputs by Abdullah Al Anan.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌍</text></svg>">
-<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
-<link rel="stylesheet" href="assets/style.css">
-<script src="assets/site.js" defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Research manuscripts, thesis work and academic research by Abdullah Al Anan.">
+  <title>Publications | Abdullah Al Anan</title>
+  <link rel="stylesheet" href="assets/style.css?v=20261114-publications">
+  <script src="assets/site.js?v=20261114-publications" defer></script>
 </head>
 <body data-page="publications" data-base="">
-<main><div class="wrap page">
-<div class="eyebrow">Scholarly output</div><h1>Publications</h1>
-<h2>Manuscripts</h2>
-<div class="card reveal"><span class="tag">Under review · Science of the Total Environment</span>
-<h3 style="font-size:1.2rem">Integrating Machine Learning, Remote Sensing, and In-Situ Data to Map Soil Organic Carbon (SOC) in Sundarbans Mangrove Forest</h3>
-<p>This study integrates 173 in-situ soil samples with soil properties, Sentinel-2 spectral indices, terrain attributes and micro-climatic variables to estimate the spatial distribution of soil organic carbon in the Sundarbans mangrove forest. Variance Inflation Factor (VIF) and Genetic Algorithm (GA) feature selection are combined with six machine-learning models.</p>
-<div class="stats"><div class="stat"><b>Sundarbans</b><span>Study area, Bangladesh</span></div><div class="stat"><b>GBRT</b><span>Best-performing model reported</span></div><div class="stat"><b>R² = 0.394 · AUC = 0.744</b><span>Key result</span></div></div>
-<p class="note" style="margin:0">Listed as under review at <i>Science of the Total Environment</i>. A DOI and final volume, issue and page details can be added if the manuscript is accepted and published.</p></div>
-<h2>Thesis &amp; academic research</h2>
-<a class="card reveal" href="projects/precipitation.html" style="display:block;color:inherit">
-<div class="eyebrow">Khulna University of Engineering &amp; Technology · 17 August, 2026</div>
-<h3 style="font-size:1.2rem">Wavelet Decomposed Short Term Daily Precipitation Forecasting Using Artificial Neural Networks in Khulna, Bangladesh</h3>
-<p>Daily precipitation forecasting, rainfall trend and persistence analysis, and extreme-rainfall return-period assessment across five rain-gauge stations in Khulna.</p>
-<p style="margin-top:8px">Supervisor: Dr. Tusar Kanti Roy · <b style="color:var(--ac)">View thesis overview →</b></p></a>
+  <main class="publications-page">
+    <div class="wrap page">
+      <p class="eyebrow"></p>
+      <h1>Publications</h1>
 
-</div></main>
+      <section class="publication-section" aria-labelledby="manuscripts-heading">
+        <div class="publication-section-heading">
+          <h2 id="manuscripts-heading">Manuscripts</h2>
+          <span class="publication-count"> · UNDER REVIEW</span>
+        </div>
+
+        <article class="publication-card manuscript-card card reveal">
+          <div class="publication-status"><span class="status-dot"></span> Under review · Science of the Total Environment</div>
+          <h3>Integrating Machine Learning, Remote Sensing, and In-Situ Data to Map Soil Organic Carbon (SOC) in Sundarbans Mangrove Forest</h3>
+          <p class="publication-abstract">This study integrates 173 in-situ soil samples with soil properties, Sentinel-2 spectral indices, terrain attributes and micro-climatic variables to estimate the spatial distribution of soil organic carbon in the Sundarbans mangrove forest. Variance Inflation Factor (VIF) and Genetic Algorithm (GA) feature selection are combined with six machine-learning models.</p>
+
+          <div class="publication-stats stats">
+            <div class="stat"><b>Sundarbans</b><span>Study area, Bangladesh</span></div>
+            <div class="stat"><b>GBRT</b><span>Best-performing model reported</span></div>
+            <div class="stat"><b>R² = 0.394 · AUC = 0.744</b><span>Key result</span></div>
+          </div>
+
+          <p class="publication-note">Listed as under review at <i>Science of the Total Environment</i>. A DOI and final volume, issue and page details can be added if the manuscript is accepted and published.</p>
+        </article>
+      </section>
+
+      <section class="publication-section thesis-section" aria-labelledby="thesis-heading">
+        <div class="publication-section-heading">
+          <h2 id="thesis-heading">Thesis &amp; academic research</h2>
+          <span class="publication-count"> · THESIS</span>
+        </div>
+
+        <a class="publication-card thesis-card card reveal" href="projects/precipitation.html">
+          <p class="publication-meta">Khulna University of Engineering &amp; Technology <span>·</span> 17 August, 2026</p>
+          <h3>Wavelet Decomposed Short Term Daily Precipitation Forecasting Using Artificial Neural Networks in Khulna, Bangladesh</h3>
+          <p class="publication-abstract">Daily precipitation forecasting, rainfall trend and persistence analysis, and extreme-rainfall return-period assessment across five rain-gauge stations in Khulna.</p>
+          <p class="publication-linkline">Supervisor: Dr. Tusar Kanti Roy <strong>View thesis overview <span aria-hidden="true">↗</span></strong></p>
+        </a>
+      </section>
+    </div>
+  </main>
 </body>
 </html>
