@@ -1,3 +1,99 @@
+:root {
+  --bg: #f4f4ee;
+  --surface: #fbfbf7;
+  --surface-soft: #e9eee6;
+  --ink: #202b25;
+  --ink-soft: #45534a;
+  --muted: #68746b;
+  --line: #d8ded5;
+  --accent: #72866c;
+  --accent-dark: #405b48;
+  --accent-warm: #c27b5d;
+  --sans: "General Sans", "Inter", "Arial", sans-serif;
+  --mono: "Space Mono", "Courier New", monospace;
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 400 1rem/1.65 var(--sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--accent-warm); outline-offset: 4px; border-radius: 3px; }
+.skip {
+  position: absolute; left: 1rem; top: -4rem; z-index: 30;
+  padding: .7rem 1rem; background: var(--ink); color: var(--bg);
+}
+.skip:focus { top: .75rem; }
+.wrap { width: min(100% - 3rem, 74rem); margin-inline: auto; }
+
+/* Header */
+.site-header {
+  position: sticky; top: 0; z-index: 20;
+  background: rgb(244 244 238 / 88%);
+  border-bottom: 1px solid rgb(216 222 213 / 85%);
+  backdrop-filter: blur(14px);
+}
+.nav-wrap { min-height: 5rem; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
+.brand {
+  display: inline-flex; align-items: center; min-height: 44px;
+  color: var(--ink); text-decoration: none; font-size: 1.25rem;
+  font-weight: 700; letter-spacing: -.07em;
+}
+.brand-dot, .title-period { color: var(--accent); }
+nav ul { display: flex; align-items: center; gap: clamp(1rem, 3vw, 2.25rem); list-style: none; margin: 0; padding: 0; }
+nav a {
+  display: inline-flex; align-items: center; min-height: 44px;
+  color: var(--ink-soft); text-decoration: none; font-size: .9rem; font-weight: 500;
+  position: relative; transition: color .2s ease;
+}
+nav a::after {
+  content: ""; position: absolute; left: 0; right: 100%; bottom: 7px;
+  height: 1px; background: var(--accent-dark); transition: right .25s ease;
+}
+nav a:hover, nav a[aria-current="page"] { color: var(--ink); }
+nav a:hover::after, nav a[aria-current="page"]::after { right: 0; }
+
+/* First screen */
+.hero { position: relative; isolation: isolate; overflow: hidden; }
+.hero-wrap { position: relative; z-index: 1; padding-top: clamp(3.5rem, 8vh, 6.5rem); padding-bottom: 3.75rem; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(15rem, .8fr); gap: clamp(2rem, 6vw, 6rem); align-items: center; }
+.hero-text { padding-block: 1rem; }
+.eyebrow {
+  display: flex; align-items: center; gap: .7rem; margin: 0;
+  color: var(--accent-dark); font: 400 .68rem/1.4 var(--mono);
+  letter-spacing: .08em; text-transform: uppercase;
+}
+.eyebrow-line { width: 1.8rem; height: 1px; background: var(--accent); display: inline-block; }
+h1, h2, h3, p { margin-top: 0; }
+.hero h1 {
+  max-width: 10ch; margin: 1.2rem 0 1.1rem;
+  font-size: clamp(3.8rem, 8.3vw, 7.3rem); line-height: .91;
+  font-weight: 600; letter-spacing: -.085em;
+}
+.lede { max-width: 35rem; margin: 1.4rem 0 0; color: var(--muted); font-size: clamp(1.05rem, 1.7vw, 1.28rem); line-height: 1.6; }
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1.1rem 1.8rem; margin-top: 2rem; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 1.35rem;
+  min-height: 3.15rem; padding: 0 1.3rem; border: 1px solid var(--accent-dark);
+  text-decoration: none; font-size: .9rem; font-weight: 600; transition: transform .2s ease, background .2s ease;
+}
+.btn-primary { background: var(--accent-dark); color: #f8f8f1; }
+.btn-primary:hover { transform: translateY(-2px); background: #304b39; }
+.btn span, .text-link span { font-size: 1.1em; }
+.text-link { display: inline-flex; align-items: center; gap: .65rem; color: var(--ink); text-decoration: none; font-size: .9rem; font-weight: 600; }
+.text-link:hover { color: var(--accent-dark); }
+.text-link span { transition: transform .2s ease; }
+ .text-link:hover span { transform: translate(2px, -2px); }
 
 /* Contact icons populated by the existing assets/site.js script */
 .contact-icons { display: flex; align-items: center; min-width: 0; }
