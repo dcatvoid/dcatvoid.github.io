@@ -816,8 +816,8 @@ body > footer:not(.site-footer) {
   letter-spacing: -.05em;
 }
 
-.page > .card.reveal,
-.page > a.card.reveal {
+.page > .card.reveal:not(.proj),
+.page > a.card.reveal:not(.proj) {
   display: block;
   padding: clamp(1.25rem, 2.5vw, 2rem) !important;
   margin: 1rem 0 2.4rem;
@@ -830,14 +830,14 @@ body > footer:not(.site-footer) {
   transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease;
 }
 
-.page > a.card.reveal:hover {
+.page > a.card.reveal:not(.proj):hover {
   border-color: color-mix(in srgb, var(--accent) 60%, var(--line));
   box-shadow: 0 .9rem 2.2rem rgb(32 43 37 / 8%);
   transform: translateY(-2px);
 }
 
-.page > .card.reveal > h3,
-.page > a.card.reveal > h3 {
+.page > .card.reveal:not(.proj) > h3,
+.page > a.card.reveal:not(.proj) > h3 {
   max-width: 62ch;
   margin: .85rem 0 .75rem !important;
   color: var(--ink);
@@ -848,8 +848,8 @@ body > footer:not(.site-footer) {
   text-wrap: pretty;
 }
 
-.page > .card.reveal > p,
-.page > a.card.reveal > p {
+.page > .card.reveal:not(.proj) > p,
+.page > a.card.reveal:not(.proj) > p {
   max-width: 76ch;
   margin: 0 0 1rem;
   color: var(--ink-soft);
@@ -857,19 +857,19 @@ body > footer:not(.site-footer) {
   line-height: 1.75;
 }
 
-.page > a.card.reveal > p:last-child {
+.page > a.card.reveal:not(.proj) > p:last-child {
   margin-top: 1rem !important;
   margin-bottom: 0;
 }
 
-.page > .card.reveal .stats {
+.page > .card.reveal:not(.proj) .stats {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: stretch;
   gap: .75rem;
   margin: 1.4rem 0 1.25rem;
 }
 
-.page > .card.reveal .stat {
+.page > .card.reveal:not(.proj) .stat {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -879,61 +879,61 @@ body > footer:not(.site-footer) {
   background: var(--bg);
 }
 
-.page > .card.reveal .stat b {
+.page > .card.reveal:not(.proj) .stat b {
   font-size: clamp(1.05rem, 1.8vw, 1.45rem);
   line-height: 1.22;
   overflow-wrap: anywhere;
 }
 
-.page > .card.reveal .stat span {
+.page > .card.reveal:not(.proj) .stat span {
   margin-top: .4rem;
   font-size: .76rem;
 }
 
-.page > .card.reveal .tag {
+.page > .card.reveal:not(.proj) .tag {
   margin-bottom: .15rem;
   background: var(--surface-soft);
 }
 
-.page > .card.reveal .note {
+.page > .card.reveal:not(.proj) .note {
   margin: 1.2rem 0 0 !important;
   border-radius: 0 .5rem .5rem 0;
 }
 
-.page > a.card.reveal .eyebrow {
+.page > a.card.reveal:not(.proj) .eyebrow {
   margin: 0 0 .75rem;
   color: var(--accent-dark);
   font-size: .65rem;
   line-height: 1.6;
 }
 
-.page > a.card.reveal h3 + p {
+.page > a.card.reveal:not(.proj) h3 + p {
   margin-top: .7rem;
 }
 
-.page > a.card.reveal b {
+.page > a.card.reveal:not(.proj) b {
   color: var(--accent-dark);
 }
 
 @media (max-width: 760px) {
-  .page > .card.reveal .stats {
+  .page > .card.reveal:not(.proj) .stats {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 520px) {
-  .page > .card.reveal,
-  .page > a.card.reveal {
+  .page > .card.reveal:not(.proj),
+  .page > a.card.reveal:not(.proj) {
     padding: 1.1rem !important;
     border-radius: .85rem;
   }
 
-  .page > .card.reveal .stats {
+  .page > .card.reveal:not(.proj) .stats {
     grid-template-columns: minmax(0, 1fr);
     gap: .55rem;
   }
 
-  .page > .card.reveal .stat {
+  .page > .card.reveal:not(.proj) .stat {
     min-height: auto;
     padding: .85rem .95rem;
   }
@@ -1138,5 +1138,49 @@ body > footer:not(.site-footer) {
   .publications-page .publication-card {
     padding: 1.05rem;
     border-radius: .85rem;
+  }
+}
+
+/* Compact thumbnails on the research projects listing */
+.page > a.card.proj {
+  grid-template-columns: minmax(10.5rem, 13.75rem) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(1rem, 2.5vw, 1.7rem);
+}
+
+.page > a.card.proj > .fig {
+  width: 100%;
+  height: 10.75rem;
+  min-height: 0;
+  max-height: 10.75rem;
+  aspect-ratio: auto;
+  align-self: start;
+}
+
+.page > a.card.proj > .fig img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: contain;
+  background: var(--surface-soft);
+}
+
+@media (max-width: 760px) {
+  .page > a.card.proj {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .page > a.card.proj > .fig {
+    height: 10rem;
+    min-height: 0;
+    max-height: 10rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page > a.card.proj > .fig {
+    height: 8.75rem;
+    min-height: 0;
+    max-height: 8.75rem;
   }
 }
